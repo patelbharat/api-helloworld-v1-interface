@@ -1,0 +1,34 @@
+swagger: "2.0"
+info:
+  description: "This is the API for saying hello to the world"
+  version: "0.1.0"
+  title: "Hello World API"
+  contact: {}
+basePath: "/api/v1/hello"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+paths:
+  /greet:
+    get:
+      summary: "API root"
+      operationId: sayHello
+      tags:
+        - Hello
+      description: "The root of this API definition"
+      parameters: []
+      responses:
+        200:
+          description: "OK"
+          schema:
+            $ref: "#/definitions/Message"
+definitions:
+  Message:
+    type: "object"
+    properties:
+      msg:
+        type: "string"
+        description: "The Message!"
+    example:
+      msg: "Hello World!"
