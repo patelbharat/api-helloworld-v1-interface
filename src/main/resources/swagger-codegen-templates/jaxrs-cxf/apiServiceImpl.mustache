@@ -26,12 +26,10 @@ public class {{classname}}ServiceImpl implements {{classname}} {
 {{#operation}}
     public {{>returnTypes}} {{nickname}}({{#allParams}}{{>queryParamsImpl}}{{>pathParamsImpl}}{{>headerParamsImpl}}{{>bodyParams}}{{>formParamsImpl}}{{#hasMore}}, {{/hasMore}}{{/allParams}}) {
         // TODO: Implement...
-        
+
         {{^vendorExtensions.x-java-is-response-void}}return null;{{/vendorExtensions.x-java-is-response-void}}
     }
-    
+
 {{/operation}}
 }
 {{/operations}}
-
-
